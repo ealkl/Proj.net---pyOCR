@@ -147,11 +147,10 @@ bgcolor="white"		# color for output whiteboard background
 bluramt=0.2			# blur sigma for use with smoothing threshold
 
 # set directory for temporary files
-dir="./tmp"    # suggestions are dir="." or dir="/tmp"
+dir="."    # suggestions are dir="." or dir="/tmp"
 
 # set up functions to report Usage and Usage with Description
-#PROGNAME=`type $0 | awk '{print $3}'`  # search for executable on path
-PROGNAME=`/Users/drlund/git/Proj.net---pyOCR/pyOCR/textcleaner.sh`  # search for executable on path
+PROGNAME=`/opt/local/bin/convert`  # search for executable on path
 PROGDIR=`dirname $PROGNAME`            # extract directory of program
 PROGNAME=`basename $PROGNAME`          # base name of program
 usage1() 
