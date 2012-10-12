@@ -3,8 +3,9 @@ Created on Oct 8, 2012
 
 @author: ealkl
 '''
-import pyodbc, shutil
+import pyodbc, shutil, subprocess, shlex
 from cv2 import *
+from tesseract.pytesser import *
 #this is important for capturing/displaying images
 
 server = '192.168.227.128'
@@ -15,19 +16,21 @@ pwd = 'testacc'
 #picture = 'test.png' #test.jpg
 
 #Should store in another "temp" directory.
-
 camimg = VideoCapture(0)   # 0 = device
 s, camimg = camimg.read()
 if s:    # frame captured without any errors
-    namedWindow("cam-test",CV_WINDOW_AUTOSIZE)
-    imshow("cam-test",camimg)
-    waitKey(0)
-    destroyWindow("cam-test")
+#    namedWindow("cam-test",CV_WINDOW_AUTOSIZE)
+#    imshow("cam-test",camimg)
+#    waitKey(0)
+#    destroyWindow("cam-test")
     imwrite('test.jpg', camimg)#("test.jpg",camimg) #save image
 
+#ImageMagick - textcleaner. Cleaning source picture for background noise.
+subprocess.call(shlex.split("./textcleaner.sh test.jpg converted_image.jpg"))
+#args = ['./textcleaner.sh', 'test.jpg', 'converted_image.jpg']
+#proc = subprocess.Popen(args)
 #Tesseract OCR
-from tesseract.pytesser import *
-im = Image.open('test.jpg')
+im = Image.open('converted_image.jpg')
 text = image_to_string(im)
 print text
 #SQL connection string.

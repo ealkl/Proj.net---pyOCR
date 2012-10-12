@@ -17,7 +17,7 @@ cleanup_scratch_flag = True  # Temporary files cleaned up after OCR operation
 def call_tesseract(input_filename, output_filename):
 	"""Calls external tesseract.exe on input file (restrictions on types),
 	outputting output_filename+'txt'"""
-	args = [tesseract_exe_name, input_filename, output_filename]
+	args = [tesseract_exe_name, input_filename, output_filename, "letters"]
 	proc = subprocess.Popen(args)
 	retcode = proc.wait()
 	if retcode!=0:
@@ -53,7 +53,6 @@ def image_file_to_string(filename, cleanup = cleanup_scratch_flag, graceful_erro
 		if cleanup:
 			util.perform_cleanup(scratch_image_name, scratch_text_name_root)
 	return text
-	
 
 if __name__=='__main__':
 	im = Image.open('phototest.tif')

@@ -7,18 +7,14 @@ If you feel like testing it out, clone the project (launch pyOCR) and follow the
 Cam-interface
 -----------------
 * A function to interface with a (web)camera, take a picture - which we then can parse/import to a renaming & numbering function (see below). (Check)
-
 * Need a function to store an image to the locale filesystem, and rename them numerical & incrementaly. For identification. (Check)
-
 * Timestamp??
 
 #OCR-function
 -----------------
-Currently have this part operational on a test picture, with the following dependencies. Advanced options (Limiting characters? Perhaps directly by adding parameter to binary call of tesseract?) are not available in pytesser.
-
-* pyTesser (Optical Character Recognition module for Python.: http://code.google.com/p/pytesser/)
-
-* If you want to handle images 'in memory' you need PIL (Python Image Library): http://www.pythonware.com/products/pil/
+Currently have this part operational on a test picture, with the listed dependencies. 
+* Will be adding config to limit Tesseract characters. 
+* Also need to clean source image before processing.
 
 Database & Archive
 -----------------
