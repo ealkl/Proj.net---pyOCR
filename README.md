@@ -35,7 +35,7 @@ HOW TO
 * OpenCV (This module is required for capturing pictures from a webcam).
 * Python Image Library
 * Tesseract OCR
-* ImageMagick & Python-ImageMagick
+* ImageMagick
 
 
 ##Installing libraries & dependencies.
@@ -68,5 +68,5 @@ HOW TO
 * Windows: Who knows? I think there is a precompiled binary available :)
 * Remember to install Language files (I was prompted for: /opt/lib/share/tessdata/eng.traineddata). You can get the english datafiles from here: http://code.google.com/p/tesseract-ocr/downloads/detail?name=tesseract-ocr-3.01.eng.tar.gz&can=2&q=
 
-###ImageMagick & Python-ImageMagick
+###ImageMagick
 * Use your favourite package manager to install ImageMagick like described in previous posts.
