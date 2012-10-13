@@ -8,17 +8,17 @@ Cam-interface
 -----------------
 * A function to interface with a (web)camera, take a picture - which we then can parse/import to a renaming & numbering function (see below). (Check)
 * Need a function to store an image to the locale filesystem, and rename them numerical & incrementaly. For identification. (Check)
-* Timestamp??
 
 #OCR-function
 -----------------
-Currently have this part operational on a test picture, with the listed dependencies. 
-* Will be adding config to limit Tesseract characters. 
-* Also need to clean source image before processing.
+* Will be adding config to limit Tesseract characters (../tessdata/config/[file] & load with argument). 
+* Also need to clean source image before processing (needs tweaking).
+* Ability to crop image (functionality is there, however it is yet to be implemented).
 
 Database & Archive
 -----------------
 * Currently the script will, after processing the picture through tesseract, copy the image to the archive directory and rename the file to the corrosponding ID stored in the MySQL.
+* Also stores the time for image capture.
 
 Print-function(?)
 -----------------
