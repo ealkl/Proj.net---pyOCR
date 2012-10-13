@@ -13,7 +13,6 @@ database = 'cd_inventory'
 table = 'artists'
 uid = 'testacc'
 pwd = 'testacc'
-#picture = 'test.png' #test.jpg
 
 #Should store in another "temp" directory.
 #camimg = VideoCapture(0)   # 0 = device
