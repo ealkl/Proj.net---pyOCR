@@ -2,7 +2,7 @@
 -----------------
 Currently only placeholder for some notes for the project. 
 
-If you feel like testing it out, clone the project (launch pyOCR) and follow the instructions in the buttom of the page for instructions on how to install & compile dependencies.
+If you feel like testing it out, clone the project (launch pyOCR) and follow the instructions on the buttom of the page on how to install & compile (most) dependencies.
 
 Cam-interface
 -----------------
@@ -13,12 +13,13 @@ Cam-interface
 -----------------
 * Will be adding config to limit Tesseract characters (../tessdata/config/[file] & load with argument). 
 * Also need to clean source image before processing (needs tweaking).
-* Ability to detecte plates & crop image (OpenANPR, some deprecations. But is working).
+* Ability to detecte plates & crop image (OpenANPR, some deprecations. But it is working).
 
 Database & Archive
 -----------------
 * Currently the script will, after processing the picture through tesseract, copy the image to the archive directory and rename the file to the corrosponding ID stored in the MySQL.
 * Also stores the time for image capture.
+* Since the OpenANPR library is nowhere perfect, it can give you multiple outputs. We need some method of "chaining" these pictures to the same (some) ID, for backlogging.
 
 Print-function(?)
 -----------------
