@@ -13,7 +13,7 @@ Cam-interface
 -----------------
 * Will be adding config to limit Tesseract characters (../tessdata/config/[file] & load with argument). 
 * Also need to clean source image before processing (needs tweaking).
-* Ability to crop image (functionality is there, however it is yet to be implemented).
+* Ability to detecte plates & crop image (OpenANPR, some deprecations. But is working).
 
 Database & Archive
 -----------------
